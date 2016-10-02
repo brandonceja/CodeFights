@@ -1,0 +1,30 @@
+/*
+  Circle of numbers:
+  
+  Consider integer numbers between 0 and n - 1  being in the 
+  perimeter of a circle separated with the same distance among them
+  such that each number has one in front of it.
+  
+  They give you the number of digits to be in the circunference n
+  and the firstNumber.
+
+  You have to calculate which number is in front of the firstNumber
+  
+  for example:
+  
+  n = 10 and firstNumber = 2
+  circleOfNumber(n,firstNumber) = 7  
+*/
+
+int circleOfNumbers(int n, int firstNumber) 
+{
+    if(firstNumber < n/2)
+    {
+        firstNumber += n/2;
+    }
+    else
+    {
+        firstNumber -= n/2;
+    }
+    return firstNumber;
+}
