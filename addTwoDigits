@@ -1,0 +1,15 @@
+/* 
+  Add two digits:
+  You´re always given a two digits number
+  you have to add the digits of the number
+  
+  for example:
+
+  for n = 29
+  addTwoDigitsNumber(n) = 11
+*/
+
+int addTwoDigits(int n) 
+{
+	return n%10 + n/10;
+}
