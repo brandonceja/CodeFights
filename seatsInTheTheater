@@ -1,0 +1,26 @@
+/*
+    Seats in the theater:
+    
+    You're supossed to be in a theater, but you didn't like the performance
+    so you want to leave and the exit is one row behind you to your left.
+    The problem is that you are very shy and you don't want to block the view 
+    for the other people. Given the total number of columns and rows, and the
+    row and column where you are, you want to calculate for how many people are
+    you obstructing the view
+    
+    for example:
+    
+    nCols  = 16 , nRows = 11 , col = 5 , row = 3
+    seatsInTheater(nCols, nRows, col, row) = 96
+    
+    As there are 96 people behind and at the left of you.
+*/
+
+int seatsInTheater(int nCols, int nRows, int col, int row)
+{
+    int behind, left;
+    behind = nCols - col +1;
+    left = nRows-row;
+    
+    return left * behind;       //It is not a slipknot reference XD
+}
