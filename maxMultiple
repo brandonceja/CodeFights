@@ -1,0 +1,27 @@
+/*
+  Max Multiple:
+  They give you a divisor and bound and you have to give the maximum multiple
+  of the divisor in that limit
+
+  for example:
+
+  divisor = 3 and bound = 10
+  maxMultiple(divisor, bound) = 9
+*/
+
+int maxMultiple(int divisor, int bound) 
+{
+    int n=1 , maxMult = 1;
+    
+    while(n<=bound)
+    {
+        if( n % divisor ==0)
+        {
+            maxMult = n;
+        }
+        
+        n++;
+    }
+    
+    return maxMult;
+}
