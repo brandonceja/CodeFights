@@ -1,0 +1,23 @@
+/*  Largest Number:
+    Given an integer n you have to give the largest number
+    with that number of digits.
+    
+    for example:
+    
+    for n = 3
+    largestNumber(n) = 999
+    
+ */
+ 
+int largestNumber(int n)
+{
+    int x = 0;
+		
+		while(n>=0)
+		{
+            x += 9 * Math.pow(10, n-1);          
+            n--;
+		}
+    
+    return x;
+}
