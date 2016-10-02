@@ -1,0 +1,19 @@
+/*
+    Candies:
+    n number of children have got m pieces of candies
+    They have to divide them in such way that everyone eats the same
+    And your goal is to determine how many candies will be eaten.
+    
+    for example:
+  
+    n = 3 and m = 10
+    candies(n,m) = 9
+  
+    Because each kid eats 3 candies and there are 3 kids
+    that's 9 candies and one remaining
+*/
+
+int candies(int n, int m) 
+{
+    return (m/n) * n;
+}
