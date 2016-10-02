@@ -1,0 +1,32 @@
+/*
+  Late Ride:
+
+  One night you go for a ride in your motorcycle. At 00:00 you start 
+  your engine which has a counter of how many time it has been working.
+  When you want to get back to your home, you think that maybe the bridges
+  to get to your home are up.
+  
+  You don't have a watch so you have to calculate what time is it only with 
+  your motorcycle timer.
+
+  The timer gives you the minutes that have passed you have to put it in format of hours:minutes 00:00 
+  and you have to sume each digit of that format so you can calculate the actual time.
+
+  for example:
+  
+  n=240
+  lateRide(n) = 4
+  
+  since 240 is equal to 04:00 and 0 + 4 + 0 + 0 = 4
+*/
+
+int lateRide(int n)
+{
+    int hours, minutes, digits;
+    hours = n/60;
+    minutes = n%60;
+    
+    digits = hours/10 + hours%10 + minutes/10 + minutes%10;
+    
+    return digits;
+}
