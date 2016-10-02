@@ -1,0 +1,58 @@
+/*
+  Phone Call:
+  
+  Some phone usage rate may be described as follows:
+
+    -first minute of a talk costs "min1" cents,
+    -each minute from the 2nd up to 10th (inclusive) costs "min2_10" cents
+    -each minute after 10th costs "min11" cents.
+    
+  You have S cents and you want to know how many minutes as maximum can you 
+  talk.
+
+  for example:
+  
+  min1 = 3 , min2_10 = 1 , min11 = 2 and S = 20
+  phoneCall(min1, min2_10, min11, S) = 14
+
+  Since you have 20 cents 20-3 of the minute one is 17
+  17-9 of minutes 1 to 10 is 8 and you have talked 10 minutes
+  so you can talk another 4 because 8 - 2*4 = 0 finally you can
+  talk 14 minutes as total.
+*/
+
+int phoneCall(int min1, int min2_10, int min11, int S) 
+{
+   int min = 0;
+    
+   if(S >= min1)
+	    {	    	
+	        min++;
+	        S-=min1;
+
+	        if(S > min2_10)
+	        {
+	            for( min=2 ; min <= 10;min++)
+	            {
+	                if(S<=0)
+	                {
+	                    break;
+	                }
+	                S-=min2_10;
+	            }
+	            
+	            while(S>0)
+	            {
+	                min++;
+	                S-=min11;
+	            }
+	            min--;
+	            
+	            if(S<0)
+	            {
+	            	min--;
+	            }
+	        }
+	    }
+    return min;
+}
