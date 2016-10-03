@@ -13,11 +13,11 @@ int largestNumber(int n)
 {
     int x = 0;
 		
-		while(n>=0)
-		{
+	while(n>=0)
+	{
             x += 9 * Math.pow(10, n-1);          
             n--;
-		}
+	}
     
     return x;
 }
