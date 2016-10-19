@@ -1,2 +1,2 @@
 # CodeFights
-All my codes to solve the arcade mode in Codefights.com
+All my codes using Java to solve the arcade mode in Codefights.com
